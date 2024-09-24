@@ -1,0 +1,26 @@
+{
+  "name": "filehandling-and-modules-basic",
+  "version": "1.0.0",
+  "description": "We are practicing node js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "node js practice "
+  },
+  "keywords": [
+    "node",
+    "js",
+    "file",
+    "handling"
+  ],
+  "author": "Rohit",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "nodemon": "^3.1.7"
+  }
+}
