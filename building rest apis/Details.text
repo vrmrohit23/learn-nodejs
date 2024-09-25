@@ -1,0 +1,20 @@
+Rest API json
+
+*    req url - returned data
+
+Get /users - HTML render
+Get /api/users - JSON array
+
+Get /api/users/1 - get user with ID 1
+Get /api/users/2 - get user with ID 2
+
+* Dynamic Path parameters
+
+Get /api/users/:id
+:id --> variable
+
+Post /api/users -- create a new user
+
+Patch /api/users/:id -- update user data
+
+Delete /api/users/:id -- delete user data
