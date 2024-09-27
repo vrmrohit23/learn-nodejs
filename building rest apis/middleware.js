@@ -1,10 +1,24 @@
 const express = require('express')
 var data = require('./mock_data.json')
-const fs = require('fs')
+const fs = require('fs');
 const app = express();
 
-
+// middleware plugin
 app.use(express.urlencoded({extended:false}))
+
+app.use((req,res,next)=>{
+    if(req.method === 'GET') req.url = '/users'
+    app.use((req,res,next)=>{
+        console.log('inner method bitch')
+        res.send(req.url)
+    })
+    next();
+})
+app.use((req,res,next)=>{
+    fs.appendFile('./log.text',`\n${Date.now()}: ${req.method}: ${req.path}`,(err)=>{
+        next();
+    })
+})
 
 app.get('/', (req, res) => {
     res.send('U are at home page')
@@ -38,7 +52,9 @@ app
         const user = data.find(item => item.id === id)
         data = data.filter(item =>item.id !== id)
         fs.writeFile('./mock_data.json',JSON.stringify(data),(err)=>{
+            if(user)
             return res.json({status:'succesfully deleted',user:user})
+            else return res.json({status:'Not found'})
         })
         
     })

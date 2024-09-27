@@ -1,4 +1,4 @@
-Rest API json
+Rest API json :
 
 *    req url - returned data
 
@@ -18,3 +18,8 @@ Post /api/users -- create a new user
 Patch /api/users/:id -- update user data
 
 Delete /api/users/:id -- delete user data
+
+Middleware Plugins :
+
+app.use() --> create a custom Middleware
+
