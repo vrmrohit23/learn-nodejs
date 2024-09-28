@@ -1,12 +1,12 @@
 # Project 1: Basic http server
-Files here contain the instructions and codes of creating a basic http server, Url parsing, creating log files using file system.
+This project demonstrates how to create a basic HTTP server in Node.js. It covers key concepts like URL parsing, routing, and logging using the file system module.
 
 ## Practice and Learning in
 
-* File System
-* http server management
-* Url parsing
-* Routing in http server
+* Working with the File System
+* Managing an HTTP Server
+* URL Parsing
+* Routing in HTTP Server
 
 ## Other related projects
 [Express intro in node.js](https://github.com/vrmrohit23/learn-nodejs/tree/main/Express%20first%20use)<br/>
@@ -14,8 +14,8 @@ Files here contain the instructions and codes of creating a basic http server, U
 
 ## For running the project
 ```bash
-1. fork repo
-2. navigate to this folder "http module for requests and responses"
-2. run npm install in terminal
-3. run node file name in terminal
+1. Fork this repository.
+2. Navigate to the folder: "http module for requests and responses".
+3. Run npm install in your terminal to install dependencies.
+4. Run the server with node <file-name> in the terminal.
 ```
