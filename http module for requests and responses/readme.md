@@ -1,4 +1,4 @@
-# Project 1: Basic http server
+# Basic http server
 This project demonstrates how to create a basic HTTP server in Node.js. It covers key concepts like URL parsing, routing, and logging using the file system module.
 
 ## Topics covered
