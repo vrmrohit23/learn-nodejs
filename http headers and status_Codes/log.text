@@ -55,3 +55,7 @@ Server: StatusCodes -- requser: not available -- Path name: /users/1008 -- Reque
 Server: StatusCodes -- requser: not available -- Path name: /users/100 -- Request method: DELETE
 Server: StatusCodes -- requser: not available -- Path name: /users -- Request method: POST
 Server: StatusCodes -- requser: not available -- Path name: /users -- Request method: POST
+Server: StatusCodes -- requser: not available -- Path name: /users -- Request method: POST
+Server: StatusCodes -- requser: not available -- Path name: /users -- Request method: GET
+Server: StatusCodes -- requser: not available -- Path name: /users/1002 -- Request method: DELETE
+Server: StatusCodes -- requser: not available -- Path name: /users -- Request method: GET
