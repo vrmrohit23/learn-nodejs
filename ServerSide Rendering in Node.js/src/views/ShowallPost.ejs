@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <% if (locals.objects) { %>
+        <table style="background-color: gray; color: white;">
+            <thead>
+                <th>Name</th>
+                <th>URL</th>
+                <th>shortid</th>
+            </thead>
+            <tbody>
+                <% objects.forEach((doc,index)=> { %>
+                    <tr style="border: 4px;">
+                        <td>
+                            <%= doc.Name %>
+                        </td>
+                        <td>
+                            <%= doc.imageURL%>
+                        </td>
+                        <td>
+                            <a href="<%= '/data/'+ doc.shortId %>"><%= doc.shortId%></a>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+        <% } %>
+</body>
+
+</html>

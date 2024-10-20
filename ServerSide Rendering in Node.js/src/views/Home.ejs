@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div
+        style="display: flex; flex-direction: column; height:100vh; justify-content: center; align-items: center; background-color: gray;">
+        <h1>Save your favourite monument</h1>
+        <form action="/data" method="post">
+            <input type="text" name="Name" placeholder="Name of Monument">
+            <input type="text" name="imageURL" placeholder="http//image-link.com">
+            <button type="submit">Submit</button>
+        </form>
+        <button style="margin-top: 2rem;">
+            <a href="/all">Show All</a>
+        </button>
+    </div>
+    
+</body>
+
+</html>
