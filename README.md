@@ -18,7 +18,10 @@ This repository contains code and exercises from my journey learning Node.js. Th
    - Performed CRUD (Create, Read, Update, Delete) operations.
 
 4. **Design/Structuring**
-   - Implemented the MVC (Model-View-Controller) architecture for better code organization. 
+   - Implemented the MVC (Model-View-Controller) architecture for better code organization.
+   
+5. **Node.js**
+   - Server-side rendering in Node.js.
      
 
 
@@ -35,6 +38,7 @@ This repository contains code and exercises from my journey learning Node.js. Th
 * **Using Appropriate Status Codes in Responses**
 * **Introduction to MongoDB and Mongoose for Database Management**
 * **Implementing MVC (Model View Controller) Architecture in Node.js**
+* **Server-side rendering via Node.js**
 
    
 
