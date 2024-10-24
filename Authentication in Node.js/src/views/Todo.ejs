@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <form action="/todos" method="post">
+                <input type="text" name="Message" id="">
+                <button type="submit">Add todo</button>
+            </form>
+        </div>
+        <div>
+            <h1>Current Todos</h1>
+            <% data.forEach((item) => { %>
+                <div style="display: flex; align-items: center;">
+                    <p style="margin-right: 1rem;">
+                        <%= item.Message %>
+                    </p>
+                    <a href="/todos/delete" ><button>delete</button></a>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+</html>
