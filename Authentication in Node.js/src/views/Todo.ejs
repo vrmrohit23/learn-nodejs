@@ -7,6 +7,14 @@
 </head>
 <body>
     <div>
+        <p style="font-size: larger;">
+
+        <b>Note:</b>
+        You must be a admin to be able to delete a todo
+    </p >
+        <% if (locals.message) { %>
+            <p style="color: red;"><%= message %></p>
+        <% } %>
         <div>
             <form action="/todos" method="post">
                 <input type="text" name="Message" id="">
@@ -20,10 +28,11 @@
                     <p style="margin-right: 1rem;">
                         <%= item.Message %>
                     </p>
-                    <a href="/todos/delete" ><button>delete</button></a>
+                    <a href="/todos/<%= item.Id %>" ><button>delete</button></a>
                 </div>
             <% }) %>
         </div>
+        <a href="/auth/logout"><button>logout</button></a>
     </div>
 </body>
 </html>

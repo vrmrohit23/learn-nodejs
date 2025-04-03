@@ -1,15 +1,16 @@
 const express = require('express')
-const {signupUser,loginUser} = require('../controllers/authentication')
+const {signupUser,loginUser,adminLogin,logout} = require('../controllers/authentication')
 const authrouter = express.Router()
 
 
 
-authrouter
-.route('/signup')
-.post(signupUser)
+authrouter.post('/signup',signupUser)
 
-authrouter
-.route('/login')
-.post(loginUser)
+authrouter.post('/login',loginUser)
+
+authrouter.post('/admin_login',adminLogin)
+
+authrouter.get('/logout',logout)
+
 
 module.exports = authrouter

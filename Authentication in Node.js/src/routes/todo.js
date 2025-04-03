@@ -1,5 +1,6 @@
 const express = require('express')
 const {addTodo,deleteOne} = require('../controllers/TodoMethods')
+const { checkauthorization } = require('../middlewares/checkUser_with_JWT')
 const router = express.Router()
 
 router.get('/',(req,res)=>{
@@ -9,10 +10,7 @@ router.get('/',(req,res)=>{
 router
 .route('/')
 .post(addTodo)
-.delete(deleteOne)
-
-
-
+router.get('/:id',checkauthorization(['admin']),deleteOne)
 
 
 module.exports = router

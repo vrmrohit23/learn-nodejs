@@ -4,11 +4,14 @@ async function addTodo(req,res){
     const Id = uuid()
     const {Message} = req.body
     await todomodel.create({Id,Message})
-    res.redirect('/')
+    return res.redirect('/')
 }
 
 async function deleteOne(req,res){
-
+    const docID = req.params?.id
+    if(!docID) return res.render('<div>no doc id found<div/>')
+    await todomodel.deleteOne({Id:docID})
+    return res.redirect('/')
 }
 
 

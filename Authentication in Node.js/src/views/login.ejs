@@ -17,6 +17,21 @@
             <input type="text" name="Password" >
             <button type="submit">login</button>
         </form>
+        <% if (locals.error) { %>
+            <p style="color: red;"><%= error %></p>
+           <% } %>
+        <h1>Login as admin</h1>
+        <form action="/auth/admin_login" method="post">
+            <label>Email</label>
+            <input type="text" name="Email" >
+            <label>Password</label>
+            <input type="text" name="Password" >
+            <button type="submit">login</button>
+        </form>
+        <% if (locals.adminerror) { %>
+         <p style="color: red;"><%= adminerror %></p>
+        <% } %>
+        <a href="/signup" style="font-size: xx-large;">go to signup</a>
     </div>
 </body>
 

@@ -14,6 +14,11 @@ const schema = new mongoose.Schema({
         type:String,
         required:true
     },
+    role:{
+        type:String,
+        required: true,
+        default:'normal',
+    },
 },{timestamps:true})
 
 const authmodel = mongoose.model('Authentication',schema)

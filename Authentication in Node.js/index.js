@@ -6,7 +6,8 @@ const cookieParser = require('cookie-parser')
 const app = express();
 const path = require('path')
 const connection = require('./src/connection')
-const checkUser = require('./src/middlewares/checkUser')
+const { checkUser } = require('./src/middlewares/checkUser_with_JWT')
+
 
 connection('mongodb://127.0.0.1:27017/Todo_App')
 
@@ -15,10 +16,10 @@ app.set('views',path.resolve('./src/views'))
 app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-
+app.use(checkUser)
 
 app.use('/',staticRouter)
 app.use('/auth',authrouter)
-app.use('/todos',checkUser,todorouter)
+app.use('/todos',todorouter)
 
 app.listen(8002,()=>console.log('server started'))
